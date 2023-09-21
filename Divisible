@@ -1,0 +1,28 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+public class Divisible {
+    public Divisible() {
+    }
+
+    public static void main(String[] var0) {
+        int var1 = 0;
+        String var2 = " kutta ";
+        String var3 = " fizz ";
+
+        for(String var4 = "fuzz"; var1 <= 500; ++var1) {
+            if (var1 % 3 == 0 && var1 % 5 == 0) {
+                System.out.println(" ullu ");
+            } else if (var1 % 3 == 0) {
+                System.out.println(var3);
+            } else if (var1 % 5 == 0) {
+                System.out.println(var4);
+            } else {
+                System.out.println(var2 + var1);
+            }
+        }
+
+    }
+}
