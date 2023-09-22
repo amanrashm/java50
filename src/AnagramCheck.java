@@ -1,7 +1,6 @@
 public class AnagramCheck {
     public static void main (String[] args) {
-        String str1 = "listen";
-        String str2 = "silent";
+        String str1 = "listen"; String str2 = "silent";
         boolean areAnagrams = areAnagrams(str1, str2);
         if (areAnagrams) {
             System.out.println(str1 + " and " + str2 + " are anagrams.");
@@ -13,8 +12,7 @@ public class AnagramCheck {
         if (str1.length() != str2.length()) {
             return false;
         }
-        int[] count1 = new int[26];
-        int[] count2 = new int[26];
+        int[] count1 = new int[26]; int[] count2 = new int[26];
         for (char c : str1.toCharArray()) {
             count1[c - 'a']++;
         }
