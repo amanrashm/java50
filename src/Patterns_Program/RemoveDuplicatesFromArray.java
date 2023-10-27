@@ -5,7 +5,7 @@ import java.util.LinkedHashSet;
 public class RemoveDuplicatesFromArray {
     public static void main(String[] args) {
         int[] arr = {1, 2, 2, 3, 4, 4, 5, 6, 6};
-        LinkedHashSet<Integer> uniqueSet = new LinkedHashSet<>();
+         LinkedHashSet<Integer> uniqueSet = new LinkedHashSet<>();
         for (int num : arr) {
             uniqueSet.add(num);
         }
