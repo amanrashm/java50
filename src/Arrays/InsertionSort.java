@@ -1,3 +1,5 @@
+package Arrays;
+
 import java.util.Arrays;
 public class InsertionSort {
     public static void main(String[] args) {

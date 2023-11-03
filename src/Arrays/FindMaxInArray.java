@@ -1,3 +1,5 @@
+package Arrays;
+
 public class FindMaxInArray {
     public static void main(String[] args) {
         int[] arr = {12, 45, 67, 89, 34, 56};

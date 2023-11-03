@@ -1,6 +1,6 @@
 public class LeapYearCheck {
     public static void main(String[] args) {
-        int year = 2024;
+        int year = 2100;
         boolean isLeapYear = isLeapYear(year);
         if (isLeapYear) {
             System.out.println(year + " is a leap year.");

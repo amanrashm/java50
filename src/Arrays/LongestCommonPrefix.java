@@ -1,3 +1,5 @@
+package Arrays;
+
 public class LongestCommonPrefix {
     public static void main(String[] args) {
         String[] inputStrings = {"flower", "flow", "flight", "flock"};

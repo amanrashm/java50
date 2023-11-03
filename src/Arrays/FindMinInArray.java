@@ -1,3 +1,5 @@
+package Arrays;
+
 public class FindMinInArray {
     public static void main(String[] args) {
         int[] arr = {56, 34, 12, 89, 67}; // Change the array elements as needed
