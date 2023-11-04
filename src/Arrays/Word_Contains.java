@@ -1,6 +1,7 @@
 package Arrays;
 
 import java.util.HashMap;
+/*
 public class Word_Contains {
     public static void main(String[] args) {
         String[] str = {"tiger", "tiger", "cat", "dog", "lion", "lion"};
@@ -21,5 +22,18 @@ public class Word_Contains {
                 System.out.println(str[i] + ": " + counts[i]);
             }
         }
+    }
+}*/
+
+import java.util.Arrays;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+public class Word_Contains {
+    public static void main(String[] args) {
+        String[] str = {"tiger", "tiger", "cat", "dog", "lion", "lion"};
+        Map<String, Long> wordCounts = Arrays.stream(str)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        wordCounts.forEach((word, count) -> System.out.println(word + ": " + count));
     }
 }
