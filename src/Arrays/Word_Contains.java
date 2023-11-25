@@ -25,7 +25,7 @@ public class Word_Contains {
     }
 }*/
 
-import java.util.Arrays;
+/*import java.util.Arrays;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -35,5 +35,26 @@ public class Word_Contains {
         Map<String, Long> wordCounts = Arrays.stream(str)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         wordCounts.forEach((word, count) -> System.out.println(word + ": " + count));
+    }
+}*/
+
+import java.util.Map;
+
+public class Word_Contains {
+    public static void main(String[] args) {
+        String[] str = {"tiger", "tiger", "cat", "dog", "lion", "lion"};
+        Map<String, Long> wordCounts = countWords(str);
+        wordCounts.forEach((word, count) -> System.out.println(word + ": " + count));
+    }
+    public static Map<String, Long> countWords(String[] str) {
+        Map<String, Long> wordCounts = new HashMap<>();
+        for (String word : str) {
+            if (wordCounts.containsKey(word)) {
+                wordCounts.put(word, wordCounts.get(word) + 1);
+            } else {
+                wordCounts.put(word, 1L);
+            }
+        }
+        return wordCounts;
     }
 }

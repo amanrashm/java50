@@ -1,5 +1,5 @@
 package Arrays;
-
+/*
 public class LongestCommonPrefix {
     public static void main(String[] args) {
         String[] inputStrings = {"flower", "flow", "flight", "flock"};
@@ -23,6 +23,21 @@ public class LongestCommonPrefix {
                 }
             }
         }
+        return prefix;
+    }
+}
+
+*/
+public class LongestCommonPrefix {
+    public static void main(String[] args) {
+        String[] strs = {"flower", "flow", "flight", "flock"};
+        System.out.println("The longest common prefix is: " + longestCommonPrefix(strs));
+    }
+
+    public static String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) return "";
+        String prefix = strs[0];
+        for (String str : strs) while (!str.startsWith(prefix)) prefix = prefix.substring(0, prefix.length() - 1);
         return prefix;
     }
 }

@@ -2,6 +2,7 @@ package Arrays;
 
 import java.util.Arrays;
 
+/*
 public class RemoveDuplicatesFromArray {
     public static void main(String[] args) {
         int[] arr = {2, 4, 2, 7, 9, 4, 7}; // Change the array elements as needed
@@ -26,5 +27,13 @@ public class RemoveDuplicatesFromArray {
             }
         }
         return Arrays.copyOf(uniqueArray, uniqueCount);
+    }
+}*/
+
+public class RemoveDuplicatesFromArray {
+    public static void main(String[] args) {
+        int[] arr = {2, 4, 2, 7, 9, 4, 7};
+        int[] uniqueArray = Arrays.stream(arr).distinct().toArray();
+        System.out.println("Array with duplicates removed: " + Arrays.toString(uniqueArray));
     }
 }
