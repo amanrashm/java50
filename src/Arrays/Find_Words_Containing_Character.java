@@ -1,16 +1,12 @@
 package Arrays;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Find_Words_Containing_Character {
     public List<Integer> findWordsContaining(String[] words, char x) {
-        List<Integer> indices = new ArrayList<>();
-        for (int i = 0; i < words.length; i++) {
-            if (words[i].indexOf(x) != -1) {
-                indices.add(i);
-            }
-        }
-        return indices;
+        return IntStream.range(0, words.length).filter(i -> words[i].indexOf(x) != -1).boxed().collect(Collectors.toList());
     }
     public static void main(String[] args) {
         Find_Words_Containing_Character wordFinder = new Find_Words_Containing_Character();
