@@ -1,5 +1,7 @@
 package Arrays;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Fact_Count {
@@ -30,15 +32,21 @@ public class Fact_Count {
         //int[] n = {28, 26, 13, 17, 18};
         //int[] count1 = factCount(n);
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number Of Total Iterations You want to have");
         int numberOfTotalIterations = sc.nextInt();
         int n;
-        int [] count1;
+        int count1;
+        List<Integer> factCount = new ArrayList<>();
         //Taking numbers one by one find the factor and then store it in array
         while(0 <= numberOfTotalIterations--){
             System.out.print("Give number to find the count of factor : ");
             n = sc.nextInt();
-            count1 = new int[]{factCount(n)};
-            System.out.println(Arrays.toString(count1));
+            count1 = factCount(n);
+            factCount.add(count1);
+            System.out.println(count1);
         }
+        Integer [] ArrayCount = new Integer[factCount.size()];
+        ArrayCount = factCount.toArray(ArrayCount);
+        System.out.println(Arrays.toString(ArrayCount));
     }
 }
