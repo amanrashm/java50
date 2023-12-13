@@ -1,6 +1,6 @@
 public class Prime {
     public static void main(String[] args) {
-        int limit = 1000;
+        int limit = 21;
         boolean[] isPrime = new boolean[limit + 1];
         long startTime = System.nanoTime();
         for (int i = 2; i <= limit; i++) {
